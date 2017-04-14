@@ -10,6 +10,18 @@
         "psr-4": {"AbbeyCat\\": "src/AbbeyCat/"}
     },
     
+    "keywords": [
+        "preprocessor"
+    ],
+    
+    "authors": [
+        {
+            "name": "Abbey Cat",
+            "email": "abbeycatuk@gmail.com",
+            "role": "lead"
+        }
+    ],
+    
     "bin": ["prepro"],
 
     "require-dev": {

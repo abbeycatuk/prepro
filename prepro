@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+
+    /*
+     * prepro
+     *
+     * Copyright (C) 2017 AbbeyCat (abbeycatuk@gmail.com)
+     *
+     * This software may be modified and distributed under the terms
+     * of the MIT license. See the LICENSE file for details.
+     */
+
+    if (file_exists($file = __DIR__.'/../../autoload.php')) {
+        require_once $file;
+    } else {
+        require_once __DIR__.'/vendor/autoload.php';
+    }
+
+    $prepro = new \AbbeyCat\PrePro\PreProcessor(new \AbbeyCat\PrePro\Parser\CliParameters);
+    $prepro->preprocess(new \AbbeyCat\PrePro\Parser\Configuration, new \AbbeyCat\PrePro\Parser\Definitions, new \AbbeyCat\PrePro\BasicFolderSync);

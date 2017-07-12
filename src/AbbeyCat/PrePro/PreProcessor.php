@@ -45,7 +45,7 @@ class PreProcessor
         \AbbeyCat\PrePro\FolderSyncInterface $folder_sync
     ) {
 
-        echo "prepro 1.0.0 by AbbeyCat.\n";
+        echo "prepro 1.0.1 by AbbeyCat.\n";
 
         /* parse the configuration file, obtaining a map of extension => affix mappings */
         $configuration = file_get_contents($this->parameters->config());

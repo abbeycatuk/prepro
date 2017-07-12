@@ -39,8 +39,11 @@ class BasicFolderSync implements FolderSyncInterface
         if (is_file($target)) {
             unlink($target);
         } elseif (is_dir($target)) {
-            foreach (glob($target . '*', GLOB_MARK) as $file) {
-                $this->delete($file);
+            $files = new \DirectoryIterator($target);
+            foreach ($files as $file) {
+                if (!$file->isDot()) {
+                    $this->delete(($file->isDir()) ? "{$target}/{$file}/" : "{$target}/{$file}");
+                }
             }
             rmdir($target);
         }

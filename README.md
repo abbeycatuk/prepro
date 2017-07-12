@@ -12,7 +12,7 @@ definitions file, and a configuration file.
 The definitions follows essentially a C-like syntax and identifies all 
 constants (one per line) that prepro is to consider during preprocessing.
 
-The example below identifes a definitions file (prepro.def) that associates 
+The example below identifies a definitions file (prepro.def) that associates 
 the constant "MAX_USERNAME_LENGTH" with the value "20":
 
 ```
